@@ -1,0 +1,65 @@
+.projects-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  padding: 1.3rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.project-year {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.92rem;
+}
+
+.project-description {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  background: rgba(112, 227, 255, 0.1);
+  color: #cbf8ff;
+  font-size: 0.84rem;
+}
+
+.project-link {
+  margin-top: auto;
+  width: fit-content;
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+}
+
