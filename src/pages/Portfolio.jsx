@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const navItems = [
   { id: 'home', label: 'Home' },
@@ -154,15 +154,6 @@ function Portfolio() {
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
   }, []);
-
-  const heroStats = useMemo(
-    () => [
-      { value: 'Full-stack', caption: 'UI → API → deploy' },
-      { value: 'Payments', caption: 'Authorize.Net · Razorpay' },
-      { value: 'B.Tech CS', caption: 'VIT-AP · 2025' },
-    ],
-    []
-  );
 
   const handleNavClick = (id) => {
     setActive(id);
