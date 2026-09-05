@@ -12,75 +12,54 @@ const navItems = [
 const skillGroups = [
   {
     title: 'Languages',
-    items: ['JavaScript (ES6+)', 'ColdFusion (CFML)', 'PHP', 'Python', 'Java', 'HTML5', 'CSS3', 'SQL'],
+    items: ['JavaScript (ES6+)', 'TypeScript', 'ColdFusion (CFML)', 'PHP', 'Python', 'Java', 'HTML5', 'CSS3', 'SQL'],
   },
   {
     title: 'Frameworks & Libraries',
-    items: ['React.js', 'React Native (Expo)', 'Node.js', 'Express.js', 'jQuery', 'Bootstrap 5'],
+    items: ['React', 'Angular', 'jQuery', 'Bootstrap 5', 'Node.js'],
   },
   {
     title: 'APIs & Practices',
-    items: ['REST APIs', 'JWT Auth', 'Payment Gateways', 'Authorize.Net', 'Razorpay', 'AJAX', 'Responsive Design', 'Agile / Scrum'],
+    items: ['REST APIs', 'ES Modules', 'AJAX', 'Responsive Web Design', 'Web Performance'],
   },
   {
     title: 'Databases & Tools',
-    items: ['MySQL', 'MongoDB', 'Git', 'Docker', 'Nginx', 'Figma', 'Jenkins', 'GitHub Actions'],
+    items: ['MySQL', 'Git', 'Docker', 'Nginx', 'Figma', 'Jenkins', 'GitHub Actions'],
   },
   {
     title: 'Cloud & Deployment',
-    items: ['DigitalOcean', 'Netlify', 'Nginx + SSL', 'CI/CD'],
+    items: ['Oracle Cloud Infrastructure (OCI)', 'Netlify'],
   },
 ];
 
 const experienceCards = [
   {
     title: 'Persona Nutrition',
-    role: 'Client platform',
-    tags: ['ColdFusion', 'JavaScript', 'AJAX', 'Bootstrap 5'],
+    role: 'E-commerce platform',
+    tags: ['ColdFusion (CFML)', 'JavaScript', 'AJAX', 'HTML/CSS'],
     bullets: [
-      'Shipped a brand-wide UI redesign across the landing, recommendations, and checkout pages — Figma to production and fully mobile-responsive.',
-      'Built the customer login portal end to end (sign-in, sign-up, password reset) on CFML, Bootstrap 5, and jQuery AJAX — hardened with CSRF tokens and input encoding.',
-      'Created a custom server-side A/B testing framework in ColdFusion — deterministic MD5 50/50 split with cookie and database visitor persistence.',
+      'Implemented a new brand-wide UI design across Persona’s core customer-facing pages — the main landing page, product recommendations page, and checkout flow — converting Figma designs into production, mobile-responsive HTML/CSS/JavaScript.',
+      'Developed the customer login dashboard end-to-end and integrated the REST APIs powering it.',
+      'Built a custom server-side A/B testing framework in ColdFusion — deterministic MD5-hash 50/50 traffic split with cookie- and database-backed visitor persistence — enabling controlled experiments without a third-party SDK.',
     ],
   },
   {
-    title: 'VYV Nutrition',
-    role: 'Feature owner',
-    tags: ['ES Modules', 'JavaScript', 'CFML', 'HTML / CSS'],
+    title: 'VblueLINK',
+    role: 'Link-management platform',
+    tags: ['Angular 20', 'TypeScript', 'SCSS'],
     bullets: [
-      'Rebuilt the product recommendations page from Figma — personalized packs, editable naming, a Shop-All modal, and a PDF nutrition report.',
-      'Re-architected legacy jQuery cart code into modular ES modules with a unified tax and duties engine for sales tax, duties, VAT and delivery.',
-      'Owned debugging through production release — resolving discount and coupon miscalculations, sales-tax gaps, and duties-rendering defects.',
+      'Standardized the UI of a production link-management platform by defining an 8-color design-token system and Manrope typography scale, applying shared styling across 25+ pages — dashboards, link & QR analytics, QR generation, barcode studio, contact cards, bulk QR, protected images, and the public marketing site.',
+      'Rebuilt page layouts for 320px–2000px responsive breakpoints and resolved production rendering issues involving flexbox min-content overflow, position: sticky failures caused by ancestor overflow, stacking contexts, and CSS specificity conflicts.',
+      'Developed a sticky global navigation with desktop hover mega-menus and mobile accordion menus, route-level SEO meta titles/descriptions for public and dynamic pages, and consolidated standalone link-management pages into filterable analytics views.',
+      'Redesigned the authenticated application shell with a collapsible sidebar, mobile header actions, and account menu, while modernizing settings, subscription/billing, API client-token management, and authentication flows — adding consistent loading states and page-transition animations.',
     ],
-  },
-];
-
-const projectCards = [
-  {
-    eyebrow: 'Vayublue · Client',
-    title: 'Persona Nutrition',
-    year: '2025',
-    description:
-      'Brand-wide UI redesign across the landing, recommendations, and checkout pages, a full customer login portal with CSRF hardening, and a custom server-side A/B testing framework.',
-    tags: ['ColdFusion', 'JavaScript', 'AJAX', 'Bootstrap 5'],
-    href: '#contact',
-  },
-  {
-    eyebrow: 'Vayublue · Feature',
-    title: 'VYV Nutrition',
-    year: '2025',
-    description:
-      'A Figma-to-responsive product recommendations page with personalized packs, a Shop-All modal, and a PDF report — plus a modular checkout with a unified tax and duties engine.',
-    tags: ['ES Modules', 'JavaScript', 'CFML', 'HTML / CSS'],
-    href: '#contact',
   },
 ];
 
 const certs = [
+  { title: 'OCI 2025 Foundations Associate', provider: 'Oracle', year: '2025', image: '/cert2.png' },
+  { title: 'JavaScript Essentials', provider: 'Cisco', year: '2024', image: '/cert3.png' },
   { title: 'Angular', provider: 'Infosys Springboard', year: '2025', image: '/cert1.png' },
-  { title: 'OCI Foundations Associate', provider: 'Oracle', year: '2025', image: '/cert2.png' },
-  { title: 'Google Cloud Digital Leader', provider: 'Google Cloud', year: '2025', image: '/cert4.png' },
-  { title: 'JavaScript Essentials', provider: 'Cisco Networking Academy', year: '2024', image: '/cert3.png' },
 ];
 
 function EmailIcon() {
@@ -239,15 +218,17 @@ function Portfolio() {
         <section id="home" className="section hero-section" ref={(el) => (sectionRefs.current[0] = el)}>
           <div className="container hero-grid">
             <div className="hero-copy">
-              <span className="eyebrow">FULL-STACK DEVELOPER · HYDERABAD, IN</span>
+              <span className="eyebrow">FRONTEND DEVELOPER · HYDERABAD, IN</span>
               <h1>
-                Building web products <span>end to end</span> — from Figma-to-code UI to payments,
-                APIs, and deployment.
+                Converting Figma designs into <span>production-ready</span> interfaces — in Angular,
+                React, and JavaScript.
               </h1>
               <p>
-                I’m Geetha Shankar, a full-stack developer at Vayublue building customer-facing checkout,
-                payment, and subscription features for the Persona Nutrition platform. I work across the stack —
-                responsive Figma-to-code interfaces, REST APIs, and Docker-based deployment.
+                I’m Geetha Shankar, a frontend developer with over a year of production experience building
+                responsive web interfaces in Angular, TypeScript, React, and JavaScript. I convert Figma designs
+                into clean, cross-browser HTML, CSS, and SCSS — design-token systems, reusable components,
+                320px–2000px responsive layouts, and REST API integration — and also work across the stack with
+                ColdFusion (CFML), PHP, MySQL, and Docker-based CI/CD deployment.
               </p>
               <div className="hero-actions">
                 <a href="/resume.pdf" download className="btn btn-primary">
@@ -274,15 +255,15 @@ function Portfolio() {
               </div>
               <div className="info-block">
                 <h3>Now at Vayublue</h3>
-                <p>Building customer-facing checkout, payment, and subscription features on the Persona Nutrition platform and its VYV sub-brand.</p>
+                <p>Building customer-facing interfaces for two products — the Persona Nutrition e-commerce platform (ColdFusion/JavaScript) and the VblueLINK link-management platform (Angular) — from Figma design to production release.</p>
               </div>
               <div className="info-block">
                 <h3>Core stack</h3>
-                <p>JavaScript, ColdFusion (CFML), PHP, React & React Native, Node / Express, Docker.</p>
+                <p>Angular, TypeScript, React, JavaScript, ColdFusion (CFML), PHP, MySQL, Docker.</p>
               </div>
               <div className="info-block">
                 <h3>Current focus</h3>
-                <p>End-to-end delivery — Figma-to-code UI, REST APIs, payment gateways, and CI/CD deployment.</p>
+                <p>Design-token systems, 320px–2000px responsive layouts, and REST API integration.</p>
               </div>
             </aside>
           </div>
@@ -313,7 +294,7 @@ function Portfolio() {
           <div className="container">
             <div className="section-heading">
               <h2>Experience</h2>
-              <p>Production work on live e-commerce and subscription platforms — owning features from Figma to release.</p>
+              <p>Production work across two platforms — owning features from Figma design to production release.</p>
             </div>
             <div className="experience-card glass-card">
               <div className="experience-header">
@@ -321,7 +302,7 @@ function Portfolio() {
                   <div className="badge-chip">V</div>
                   <div>
                     <h3>Vayublue Pvt. Ltd.</h3>
-                    <p className="role">Frontend / Full-Stack Developer</p>
+                    <p className="role">Frontend Developer</p>
                   </div>
                 </div>
                 <div className="experience-meta">
@@ -330,7 +311,7 @@ function Portfolio() {
                 </div>
               </div>
               <p className="experience-summary">
-                I build and maintain customer-facing features on a shared ColdFusion (CFML) / JavaScript codebase powering the Persona Nutrition platform and its VYV Nutrition sub-brand — owning checkout, payment, and pricing features end to end.
+                I build customer-facing web interfaces for two products — the Persona Nutrition e-commerce platform (ColdFusion/JavaScript) and the VblueLINK link-management platform (Angular) — from Figma design to production release.
               </p>
               <div className="experience-grid">
                 {experienceCards.map((item) => (
@@ -370,25 +351,7 @@ function Portfolio() {
           <div className="container">
             <div className="section-heading">
               <h2>Selected projects</h2>
-              <p>Recent builds focused on real architecture, payments, and end-to-end delivery.</p>
-            </div>
-            <div className="project-grid">
-              {projectCards.map((project) => (
-                <article key={project.title} className="glass-card project-card">
-                  <span className="eyebrow small">{project.eyebrow}</span>
-                  <div className="year-pill">{project.year}</div>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <div className="pill-list compact">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="pill">{tag}</span>
-                    ))}
-                  </div>
-                  <a href={project.href} className="btn btn-outline">
-                    View project →
-                  </a>
-                </article>
-              ))}
+              <p>A self-driven build focused on real architecture, payments, and end-to-end delivery.</p>
             </div>
             <div className="featured-card glass-card">
               <div className="featured-left">
@@ -396,10 +359,10 @@ function Portfolio() {
                 <div className="year-pill">2025</div>
                 <h3>my_eshop — Multi-Tenant E-commerce Marketplace</h3>
                 <p>
-                  A Dockerized multi-tenant marketplace: a PHP 8.3 / MySQL storefront with role-based access, a seller dashboard with revenue analytics, and an admin panel — with dual payment gateways, a JWT REST API, and a companion React Native mobile app.
+                  A multi-tenant e-commerce platform (PHP, MySQL) with separate admin, seller, and customer roles. Sellers manage their own products and orders from a dashboard; customers browse, cart, and checkout with Razorpay/Authorize.Net payments. Includes a JWT-secured REST API, and runs on Docker with Jenkins CI/CD.
                 </p>
                 <div className="pill-list">
-                  {['PHP 8.3', 'MySQL', 'Docker', 'Nginx', 'React Native', 'REST / JWT', 'Jenkins'].map((tag) => (
+                  {['PHP', 'MySQL', 'Docker', 'Nginx', 'React Native (Expo)', 'REST / JWT'].map((tag) => (
                     <span key={tag} className="pill">{tag}</span>
                   ))}
                 </div>
@@ -410,11 +373,11 @@ function Portfolio() {
               <div className="featured-right sub-card">
                 <h4>HIGHLIGHTS</h4>
                 <ul className="bullet-list">
-                  <li>Multi-tenant roles — super-admin, seller, and customer</li>
-                  <li>Dual gateways — Authorize.Net + Razorpay with server-side price checks</li>
-                  <li>JWT REST API — 10+ endpoints</li>
-                  <li>React Native (Expo) app for Android and iOS</li>
-                  <li>Jenkins CI/CD · GitHub Actions · Nginx + Let’s Encrypt</li>
+                  <li>Multi-tenant roles — admin, seller, and customer</li>
+                  <li>Dual gateways — Razorpay + Authorize.Net payments</li>
+                  <li>JWT-secured REST API</li>
+                  <li>React Native (Expo) companion mobile app</li>
+                  <li>Docker + Jenkins CI/CD</li>
                 </ul>
               </div>
             </div>
@@ -486,7 +449,7 @@ function Portfolio() {
 
       <footer className="footer">
         <div className="container footer-inner">
-          <p>© 2026 Geetha Shankar · Full-Stack Developer</p>
+          <p>© 2026 Geetha Shankar · Frontend Developer</p>
           <div className="footer-links">
             <a href="https://www.linkedin.com/in/pindiboyina-geetha-shankar-216a0627b/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://github.com/geethashankar1" target="_blank" rel="noreferrer">GitHub</a>
