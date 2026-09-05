@@ -30,6 +30,10 @@ const skillGroups = [
     title: 'Cloud & Deployment',
     items: ['Oracle Cloud Infrastructure (OCI)', 'Netlify'],
   },
+  {
+    title: 'AI Tools',
+    items: ['Claude Code', 'Claude Design', 'OpenAI Codex', 'Figma MCP'],
+  },
 ];
 
 const experienceCards = [
